@@ -1,4 +1,3 @@
- 
 "use client"
 
 import type React from "react"
@@ -165,9 +164,9 @@ export default function Home() {
     >
       {/* Static Gradient Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-[600px]">
+        <div className="absolute top-0 left-0 right-0 h-[300px]">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gradient-bg%201-E4qvxo4uTXDiZr1AcdEUplFaFf7SOD.png"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gradient-bg%201-7jh3wTkvW6WNwoKovUCepQQMSTPSp2.png"
             alt="Gradient background"
             fill
             className="object-cover"
@@ -190,7 +189,7 @@ export default function Home() {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className={`relative flex items-center justify-between max-w-[900px] mx-auto bg-white/80 backdrop-blur-sm rounded-full px-4 md:px-6 py-3 shadow-lg ${isNavbarFixed ? "shadow-md" : ""}`}
+            className={`relative flex items-center justify-between max-w-[900px] mx-auto bg-white/30 backdrop-blur-sm rounded-full px-4 md:px-6 py-3 shadow-lg shadow-[inset_0px_-4px_10px_rgba(255,255,255,0.45)] ${isNavbarFixed ? "shadow-md" : ""}`}
           >
             <div className="flex items-center gap-2">
               <button onClick={scrollToTop} className="focus:outline-none">
@@ -252,6 +251,7 @@ export default function Home() {
                   if (sectionId === "features") scrollToSection(featuresRef)
                   if (sectionId === "our-work") scrollToSection(ourWorkRef)
                   if (sectionId === "pricing") scrollToSection(pricingRef)
+                  if (sectionId === "faq") scrollToSection(faqRef)
                   if (sectionId === "contact") scrollToSection(contactRef)
                 }}
                 onScrollToTop={scrollToTop}
