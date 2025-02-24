@@ -189,8 +189,7 @@ export default function Home() {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className={`relative flex items-center justify-between max-w-[900px] mx-auto bg-white/30 backdrop-blur-sm rounded-full px-4 md:px-6 py-3 shadow-lg shadow-[inset_0px_-4px_10px_rgba(255,255,255,0.45)] ${isNavbarFixed ? "shadow-md" : ""}`}
-          >
+            className={`relative flex items-center justify-between max-w-[900px] mx-auto bg-white/60 backdrop-blur-sm rounded-full px-4 md:px-6 py-3 shadow-lg shadow-[inset_0px_-6px_20px_rgba(255,255,255,0.6)] ${isNavbarFixed ? "shadow-md" : ""}`}          >
             <div className="flex items-center gap-2">
               <button onClick={scrollToTop} className="focus:outline-none">
                 <Image
@@ -282,20 +281,20 @@ export default function Home() {
         transition={{ duration: 0.7, ease: [0.33, 1, 0.68, 1], delay: 0.2 }}
         className="flex justify-center mt-8 animate-fade-in-up"
       >
-        <div className="bg-white/80 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 flex items-center gap-2 md:gap-4 border border-gray-200 shadow-md">
+        <div className="bg-white/50 backdrop-blur-sm rounded-full px-4 md:px-6 py-2 flex items-center gap-2 md:gap-4 border border-gray-200 shadow-md">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shield-qR1FepRFADUTGYEgefcx3TyQWDqPTY.png"
             alt="Trust Shield"
-            width={28}
-            height={28}
-            className="w-6 h-6 md:w-7 md:h-7"
+            width={30}
+            height={30}
+            className="w-6 h-6 md:w-7 md:h-7 mt-[2px]"
           />
           <div className="flex items-center">
             {[...Array(5)].map((_, index) => (
-              <Star key={index} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" />
+              <Star key={index} className="w-4 h-4 md:w-5 md:h-5 text-yellow-500 fill-current" />
             ))}
           </div>
-          <span className="text-xs md:text-sm font-normal whitespace-nowrap">Trusted by 10k+ customers</span>
+          <span className="text-xs md:text-sm font-normal whitespace-nowrap">Trusted by <b>10k+</b> customers</span>
         </div>
       </motion.div>
 
@@ -307,21 +306,22 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-5xl md:text-6xl font-rethink font-heading-bold leading-tight mb-6">
-            Boost Your{" "}
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/envelope%201-yQScTe8EL2P1HH5T0WdvmTYFOhX5gf.png"
-              alt="Email"
-              width={100}
-              height={100}
-              className="inline-block -mt-2 mx-2"
-            />{" "}
-            Email
-            <br />
-            Marketing With Templates
-            <br />
-            That Increase Engagement
-          </h1>
+         <h1 className="text-4xl sm:text-5xl md:text-6xl font-rethink font-heading-bold leading-tight mb-6">
+  Boost Your{" "}
+  <Image
+    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/envelope%201-yQScTe8EL2P1HH5T0WdvmTYFOhX5gf.png"
+    alt="Email"
+    width={100}
+    height={100}
+    className="inline-block -mt-2 mx-2"
+  />{" "}
+  Email
+  <br />
+  Marketing With Templates
+  <br />
+  That Increase Engagement
+</h1>
+
 
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Hand-coded, thoroughly tested, and seamlessly optimized responsive email templates with customizable designs
@@ -607,20 +607,20 @@ export default function Home() {
             {[
               {
                 title: "Code Only",
-                price: "$39",
-                description: "Convert your designs into responsive HTML email templates with precision.",
+                price: "$79",
+                description: "Convert your .PSD or similar design files into responsive HTML email templates with precision.",
                 icon: "💻",
               },
               {
-                title: "Design + Code",
-                price: "$159",
+                title: "Design & Code",
+                price: "$199",
                 description: "Custom-designed and coded email templates to match your brand and goals",
                 icon: "🎨",
               },
               {
                 title: "Other Services",
-                price: "$15/hour",
-                description: "Hire our experts for email campaigns, automations, and landing pages.",
+                price: "$30/hour",
+                description: "Hire our experts for email campaigns, automations, landing pages, and more.",
                 icon: "⚡",
               },
             ].map((plan, i) => (

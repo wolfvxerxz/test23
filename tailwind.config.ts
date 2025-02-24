@@ -18,9 +18,10 @@ module.exports = {
 	  },
 	  extend: {
 		fontFamily: {
-		  sans: ["var(--font-inter)", "sans-serif"],
+		  sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
 		  rethink: ["var(--font-rethink-sans)", "sans-serif"],
 		  bricolage: ["var(--font-bricolage-grotesque)", "sans-serif"],
+		  gent: ["var(--font-gent-sans)", "sans-serif"],
 		},
 		fontWeight: {
 		  "heading-bold": "700",
@@ -78,11 +79,63 @@ module.exports = {
 			from: { transform: "translateX(0)" },
 			to: { transform: "translateX(calc(-50% - 2rem))" },
 		  },
+		  "gradient-x": {
+			"0%, 100%": {
+			  "background-size": "200% 200%",
+			  "background-position": "left center",
+			},
+			"50%": {
+			  "background-size": "200% 200%",
+			  "background-position": "right center",
+			},
+		  },
+		  "fade-in-up": {
+			"0%": {
+			  opacity: "0",
+			  transform: "translateY(20px)",
+			},
+			"100%": {
+			  opacity: "1",
+			  transform: "translateY(0)",
+			},
+		  },
+		  "fade-in-down": {
+			"0%": {
+			  opacity: "0",
+			  transform: "translateY(-20px)",
+			},
+			"100%": {
+			  opacity: "1",
+			  transform: "translateY(0)",
+			},
+		  },
+		  "fade-in": {
+			"0%": {
+			  opacity: "0",
+			},
+			"100%": {
+			  opacity: "1",
+			},
+		  },
+		  ripple: {
+			"0%": { transform: "scale(0)", opacity: "0.5" },
+			"100%": { transform: "scale(1)", opacity: "0" },
+		  },
+		  "glass-shine": {
+			"0%": { transform: "translateX(-100%) skew(10deg)" },
+			"100%": { transform: "translateX(200%) skew(10deg)" },
+		  },
 		},
 		animation: {
-		  "accordion-down": "accordion-down 0.2s ease-out",
-		  "accordion-up": "accordion-up 0.2s ease-out",
+		  "accordion-down": "accordion-down 0.3s cubic-bezier(0.87, 0, 0.13, 1)",
+		  "accordion-up": "accordion-up 0.3s cubic-bezier(0.87, 0, 0.13, 1)",
 		  "infinite-scroll": "infinite-scroll 60s linear infinite",
+		  "gradient-x": "gradient-x 15s ease infinite",
+		  "fade-in-up": "fade-in-up 0.7s cubic-bezier(0.33, 1, 0.68, 1)",
+		  "fade-in-down": "fade-in-down 0.7s cubic-bezier(0.33, 1, 0.68, 1)",
+		  "fade-in": "fade-in 0.7s cubic-bezier(0.33, 1, 0.68, 1)",
+		  ripple: "ripple 1s linear infinite",
+		  "glass-shine": "glass-shine 1.5s ease-in-out infinite",
 		},
 	  },
 	},

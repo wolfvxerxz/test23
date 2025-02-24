@@ -1,14 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Rethink_Sans, Bricolage_Grotesque, Tenor_Sans } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
+import { Bricolage_Grotesque, Tenor_Sans } from "next/font/google"
 import "./globals.css"
 import "../styles/fonts.css"
 import "../styles/animations.css"
-
-const rethinkSans = Rethink_Sans({
-  subsets: ["latin"],
-  variable: "--font-rethink-sans",
-})
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -52,10 +48,11 @@ export const metadata: Metadata = {
     siteName: "WolfMail",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo-hHkHWolyZR88FVgmxdQhEiqEv3sa3q.png",
-        width: 1200,
-        height: 630,
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ReallHero-6rMJlJnJy3SAb4YIHnbjrLpYZeVNlS.png",
+        width: 1600,
+        height: 675,
         alt: "WolfMail - Professional Email Templates",
+        type: "image/png",
       },
     ],
     locale: "en_US",
@@ -66,7 +63,14 @@ export const metadata: Metadata = {
     creator: "@wolfmail",
     title: "WolfMail - Professional Email Marketing Templates",
     description: "Hand-coded and thoroughly tested email templates that drive engagement",
-    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo-hHkHWolyZR88FVgmxdQhEiqEv3sa3q.png"],
+    images: [
+      {
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ReallHero-6rMJlJnJy3SAb4YIHnbjrLpYZeVNlS.png",
+        width: 1600,
+        height: 675,
+        alt: "WolfMail - Professional Email Templates",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -85,7 +89,6 @@ export const metadata: Metadata = {
   category: "Technology",
 }
 
-// New viewport export
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -99,7 +102,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${rethinkSans.variable} ${bricolageGrotesque.variable} ${tenorSans.variable} font-sans`}>
+      <body className={`${GeistSans.variable} ${bricolageGrotesque.variable} ${tenorSans.variable} font-sans`}>
         {children}
       </body>
     </html>

@@ -37,7 +37,7 @@ export function FAQSection() {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bricolage font-heading-bold mb-6">
-            Frequently Asked <span className="text-gray-400">Questions</span>
+            Frequently <span className="text-gray-400">Asked</span> Questions
           </h2>
           <p className="text-gray-600 text-xl max-w-2xl mx-auto">
             We&apos;ve gathered the most common questions to make things simple. If you don&apos;t find your answer

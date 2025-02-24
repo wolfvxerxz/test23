@@ -1,8 +1,6 @@
 import Image from "next/image"
 import { CalButton } from "./cal-button"
 import {
-  BellIcon as BrandTelegram,
-  PhoneIcon as BrandWhatsapp,
   InstagramIcon as BrandInstagram,
   TwitterIcon as BrandTwitter,
   LinkedinIcon as BrandLinkedin,
@@ -44,19 +42,13 @@ export default function Footer2() {
           <div className="space-y-4 w-full md:w-auto">
             <h3 className="text-xl font-medium">Social Media</h3>
             <div className="flex items-center gap-6">
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
-                <BrandTelegram className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
-                <BrandWhatsapp className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              <a href="https://www.instagram.com/wolfmail.services/" target="_blank" className="text-gray-400 hover:text-black transition-colors">
                 <BrandInstagram className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              <a href="https://x.com/vukdev00" target="_blank" className="text-gray-400 hover:text-black transition-colors">
                 <BrandTwitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-black transition-colors">
+              <a href="https://www.linkedin.com/in/vuk-mladenovi%C4%87/" target="_blank" className="text-gray-400 hover:text-black transition-colors">
                 <BrandLinkedin className="w-6 h-6" />
               </a>
             </div>
